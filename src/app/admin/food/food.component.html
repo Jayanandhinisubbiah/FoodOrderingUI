@@ -1,0 +1,58 @@
+<div class="container" *ngIf="food">
+    <br>
+    <br>
+    <h1>Food</h1>
+    <br>
+    <br>
+    <div  style="margin:0 auto;" >
+        <div class="row" >
+        <div class="col-md-3">
+            Category
+        </div>
+        <div class="col-md-9">
+            {{food.categoryName}}
+        </div>
+    </div>
+    <br>
+<div class="row">
+    <div class="col-md-3">
+        Food
+    </div>
+    <div class="col-md-9">
+        {{food.foodName}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3">
+        Price
+    </div>
+    <div class="col-md-9">
+        {{food.price}}
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3">
+       
+    </div>
+    <div class="col-md-9">
+        <img [src]="food.image" alt="" height="100" width="100" >
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3">
+        Detail
+    </div>
+    <div class="col-md-9">
+        {{food.detail}}
+    </div>
+</div>
+<br>
+<div>
+    <button [routerLink]="['/admin/foods']" class="btn btn-primary" >Back to List</button>
+</div></div>   
+    
+</div>
+    

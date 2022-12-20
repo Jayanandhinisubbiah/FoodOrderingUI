@@ -1,0 +1,38 @@
+<div class="container">
+<br/>
+<br/>
+<h1>All Foods</h1>
+<br/>
+<br/>
+<a [routerLink]="['/admin/food/add']">Create New</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Category</th>
+            <th>Food</th>
+<th>Price</th>
+<th></th>
+<th>Detail</th>
+<th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let food of foods;let i=index">
+        <td>
+      {{i+1}}
+        </td>
+        <td>{{food.categoryName}}</td>
+         <td>{{food.foodName}}</td>
+       <td>{{food.price}}</td>
+       <td><img [src]="food.image" alt="" height="100" width="100" ></td>
+       <td>{{food.detail}}</td>
+        <td>
+            <a class="btn btn-primary"[routerLink]="['/admin/food',food.foodId]">Edit</a>|
+            <a class="btn btn-info"[routerLink]="['/food',food.foodId]">Details</a>|
+            <a class="btn btn-danger" (click)="onDelete(food.foodId)"  >Delete</a>
+        </td>
+        </tr>
+    </tbody>
+</table>
+</div>
